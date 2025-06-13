@@ -7,6 +7,12 @@ def numericCore(digits):
     apply operators - * / in the order that produces the smallest whole (natural) result.
     If result has more than 3 digits, repeat from the top.
     Final number with less than four digits is the numeric core of the larger number
+
+    Args:
+        digits (str): a string of numbers/digits either spaced into 4 numbers or one whole number.
+    
+    Return:
+        int: the Numeric Core result of the digits
     """
     result = math.inf
     # first number is + (addition)
@@ -41,7 +47,6 @@ def numericCore(digits):
 
     if len(digits.split(" ")) == 4:
         sections = list(map(int, digits.split(" ")))
-        # print(computeNumericCore(*sections, leadingZero=False))
         return min(result, *computeNumericCore(*sections, leadingZero=False))
 
     # split a num into 4 sections: a, b, c, d
@@ -61,7 +66,6 @@ def numericCore(digits):
                     result = min(result, *computeNumericCore(numA, numB, numC, numD))
 
     if result != math.inf and len(str(int(result))) > 3:
-        # print(result)
         result = numericCore(str(int(result)))
 
     return result

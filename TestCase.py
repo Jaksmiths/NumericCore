@@ -1,6 +1,6 @@
 import math
 from NumericCore import numericCore
-from NumericStrCipher import numericStrCipher, multiNumericStrCipher
+from NumericCore.NumericStrCipher import numericStrCipher, multiNumericStrCipher
 
 class TestCase:
     def __init__(self):
