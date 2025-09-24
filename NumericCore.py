@@ -3,15 +3,15 @@ import math
 
 def numericCore(digits):
     """
-    given a number with 4 or more digits, split digits into 4 numbers without changing the order
-    apply operators - * / in the order that produces the smallest whole (natural) result.
-    If result has more than 3 digits, repeat from the top.
+    Given a number with 4 or more digits, split digits into 4 numbers without changing the order 
+    apply operators - * / in the order that produces the smallest whole (natural) result. 
+    If result has more than 3 digits, repeat from the top. 
     Final number with less than four digits is the numeric core of the larger number
 
-    Args:
+    args:
         digits (str): a string of numbers/digits either spaced into 4 numbers or one whole number.
-    
-    Return:
+
+    return:
         int: the Numeric Core result of the digits
     """
     result = math.inf
